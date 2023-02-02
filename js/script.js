@@ -53,24 +53,32 @@
 // }
 
 //TASK 5
-const tableItem = document.getElementById('myTable');
-function createTable(){
-    let rowNumber = prompt("Enter the row number", '0');
-    let cellNumber = prompt("Enter the cell number", '0');
+// const tableItem = document.getElementById('myTable');
+// function createTable(){
+//     let rowNumber = prompt("Enter the row number", '0');
+//     let cellNumber = prompt("Enter the cell number", '0');
 
-    for(let i = 0; i < rowNumber; i++){
-        //Creating tr elements
-        let row = document.createElement('tr');
-        for(let j = 0; j < cellNumber; j++){
-            //Creating td elements
-            let cell = document.createElement('td');
-            //Putting some text into every cell
-            let cellText = document.createTextNode(`Row ${i + 1} Cell ${j + 1}`)
-            cell.appendChild(cellText);
-            //Putting the cells into the rows
-            row.appendChild(cell);
-        }
-        //Showing rows on the page
-        tableItem.appendChild(row);
-    }
-}
+//     for(let i = 0; i < rowNumber; i++){
+//         //Creating tr elements
+//         let row = document.createElement('tr');
+//         for(let j = 0; j < cellNumber; j++){
+//             //Creating td elements
+//             let cell = document.createElement('td');
+//             //Putting some text into every cell
+//             let cellText = document.createTextNode(`Row ${i + 1} Cell ${j + 1}`)
+//             cell.appendChild(cellText);
+//             //Putting the cells into the rows
+//             row.appendChild(cell);
+//         }
+//         //Showing rows on the page
+//         tableItem.appendChild(row);
+//     }
+// }
+
+//TASK 6
+// const colorList = document.getElementById('colorSelect');
+
+// //Removing selected color
+// function removecolor(){
+//     colorList.remove(colorList.selectedIndex);
+// }
