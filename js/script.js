@@ -82,3 +82,13 @@
 // function removecolor(){
 //     colorList.remove(colorList.selectedIndex);
 // }
+
+//TASK 7
+function getVolume(){
+    let volume;
+    let radiusValue = document.getElementById('radius').value;
+    radiusValue = Math.abs(radiusValue);
+    volume = 4 / (3 * Math.PI * Math.pow(radiusValue, 3))
+    volume = volume.toFixed(4);
+    document.getElementById('volume').value = volume;
+}
