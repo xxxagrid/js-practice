@@ -109,27 +109,27 @@
 // }
 
 //TASK 9
-// const textForHighlightingItem = document.querySelector('.textForHighlighting');
+const textForHighlightingItem = document.querySelector('.textForHighlighting');
 
-// textForHighlightingItem.addEventListener('mouseover', makeHighlighted);
-// textForHighlightingItem.addEventListener('mouseout', removeHighlighted);
+textForHighlightingItem.addEventListener('mouseover', makeHighlighted);
+textForHighlightingItem.addEventListener('mouseout', removeHighlighted);
 
-// function makeHighlighted(){
-//     const highlightedWords = document.querySelector('.text').getElementsByTagName('span');
-//     for(let word in highlightedWords){
-//         highlightedWords[word].setAttribute('style', 'color: #33BD33;');
-//     }
-// }
-// function removeHighlighted(){
-//     const highlightedWords = document.querySelector('.text').getElementsByTagName('span');
-//     for(let word in highlightedWords){
-//         highlightedWords[word].removeAttribute('style', 'color: #33BD33;');
-//     }
-// }
+function makeHighlighted(){
+    const highlightedWords = Array.from(document.querySelectorAll('span'));
+    highlightedWords.forEach(word => {
+        word.setAttribute('style', 'color: #33BD33;');
+    })
+}
+function removeHighlighted(){
+    const highlightedWords = Array.from(document.querySelectorAll('span'));
+    highlightedWords.forEach(word => {
+        word.removeAttribute('style', 'color: #33BD33;');
+    })
+}
 
 //TASK 10
-const widthAndHeightItem = document.querySelector('.widthAndHeight');
+// const widthAndHeightItem = document.querySelector('.widthAndHeight');
 
-window.onresize = function(){
-    widthAndHeightItem.innerHTML = `Width: ${window.innerWidth} Height: ${window.innerHeight}`;
-}
+// window.onresize = function(){
+//     widthAndHeightItem.innerHTML = `Width: ${window.innerWidth} Height: ${window.innerHeight}`;
+// }
