@@ -1,4 +1,6 @@
-
+body{
+    font-size: 25px;
+}
 
 .orange{
     background: orange;
@@ -7,4 +9,8 @@
 #myTable{
     border: 2px solid black;
     font-size: 20px;
+}
+
+.text{
+    font-weight: bold;
 }

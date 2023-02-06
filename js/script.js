@@ -84,11 +84,45 @@
 // }
 
 //TASK 7
-function getVolume(){
-    let volume;
-    let radiusValue = document.getElementById('radius').value;
-    radiusValue = Math.abs(radiusValue);
-    volume = 4 / (3 * Math.PI * Math.pow(radiusValue, 3))
-    volume = volume.toFixed(4);
-    document.getElementById('volume').value = volume;
+// function getVolume(){
+//     let volume;
+//     let radiusValue = document.getElementById('radius').value;
+//     radiusValue = Math.abs(radiusValue);
+//     volume = 4 / (3 * Math.PI * Math.pow(radiusValue, 3))
+//     volume = volume.toFixed(4);
+//     document.getElementById('volume').value = volume;
+// }
+
+//TASK 8
+// const formItem = document.getElementById('randomImage');
+// const images = [
+//     "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+//     "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+//     "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+// ];
+
+// function showPicture(){
+//     let image = document.createElement('img');
+//     let indexOfRandomPicture = Math.floor(Math.random() * 3);
+//     image.setAttribute('src', `${images[indexOfRandomPicture]}`);
+//     formItem.append(image);
+// }
+
+//TASK 9
+const textForHighlightingItem = document.querySelector('.textForHighlighting');
+
+textForHighlightingItem.addEventListener('mouseover', makeHighlighted);
+textForHighlightingItem.addEventListener('mouseout', removeHighlighted);
+
+function makeHighlighted(){
+    const highlightedWords = document.querySelector('.text').getElementsByTagName('span');
+    for(let word in highlightedWords){
+        highlightedWords[word].setAttribute('style', 'color: #33BD33;');
+    }
+}
+function removeHighlighted(){
+    const highlightedWords = document.querySelector('.text').getElementsByTagName('span');
+    for(let word in highlightedWords){
+        highlightedWords[word].removeAttribute('style', 'color: #33BD33;');
+    }
 }
